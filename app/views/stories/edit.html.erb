@@ -1,0 +1,11 @@
+<h1>Edit My Story</h1>
+
+<%= form_for @story do |f| %>
+	Title: <%= f.text_field :title %> <br/> <br/>
+	Story: <%= f.text_area :content %> <br/> <br/>
+
+	<%= f.submit "Edit Story" %> <br/> <br/>
+
+<% end %>
+
+<%= link_to "Back to My Journal", stories_path %>

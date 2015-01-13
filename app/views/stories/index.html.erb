@@ -1,0 +1,12 @@
+<h1>The Story of My Life...</h1>
+
+<% @stories.each do |s| %>
+	<h3><%= s.title %></h3> <%= link_to "Read this entry", story_path(s) %>
+<% end %> <br/>
+
+<%= link_to "Add an entry", new_story_path %>
+
+
+
+
+
