@@ -45,3 +45,5 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'mongoid'
 
 gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'rails_12factor'
