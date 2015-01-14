@@ -2,10 +2,9 @@
 
 <%= form_for @story do |f| %>
 	Title: <%= f.text_field :title %><br/><br/>
-	Story: <%= f.text_area :content %><br/><br/>
-
+	Story: <%= f.text_area :content, "cols" => 40, "rows" => 2, :maxlength => 60 %><br/><br/>
 	<%= f.submit "Add Story" %>
 
-<% end %>
+<% end %> <br/>
 
 <%= link_to "Back to My Journal", stories_path %>
