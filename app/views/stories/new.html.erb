@@ -1,10 +1,14 @@
-<h1>How was your day?</h1>
+<div class="jumbotron">
+
+<h2>How was your day?</h2>
 
 <%= form_for @story do |f| %>
-	Title: <%= f.text_field :title %><br/><br/>
-	Story: <%= f.text_area :content, "cols" => 40, "rows" => 2, :maxlength => 60 %><br/><br/>
-	<%= f.submit "Add Story" %>
+	Title <br/> <%= f.text_field :title, :class =>"form-control" %><br/><br/>
+	Story <br/> <%= f.text_area :content, :maxlength => 240, :class =>"form-control" %><br/><br/>
+	<%= f.submit "Add Story", :class =>"btn" %>
 
 <% end %> <br/>
 
-<%= link_to "Back to My Journal", stories_path %>
+</div>
+
+<%= link_to "Back to My Journal", stories_path, :class =>"btn btn-link" %>
