@@ -5,6 +5,15 @@
 <%= form_for @story do |f| %>
 	Title <br/> <%= f.text_field :title, :class =>"form-control" %><br/><br/>
 	Story <br/> <%= f.text_area :content, :maxlength => 240, :rows => 10, :class =>"form-control" %><br/><br/>
+	<script>
+		document.getElementById("story_content").onkeypress = function(){
+			var numLeft = 240 - this.value.length;
+			document.getElementById("numCharsLeft").innerHTML = numLeft;
+			if(numLeft <= 0)
+				return false;
+		};
+	</script>
+	<div id="numCharsLeft">240</div>HELLO@@
 	<%= f.submit "Add Story", :class =>"btn btn-link" %>
 
 <% end %> <br/>

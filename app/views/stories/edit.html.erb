@@ -6,6 +6,18 @@
 		Title: <%= f.text_field :title, :class =>"form-control" %> <br/> <br/>
 		Story: <%= f.text_area :content, :class =>"form-control" %> <br/> <br/>
 
+	<div id="numCharsLeft">240</div>
+	<script>
+		function countChars(){
+			var numLeft = 240 - document.getElementById("story_content").value.length;
+			document.getElementById("numCharsLeft").innerHTML = numLeft;
+			if(numLeft <= 0)
+				return false;
+		};
+		document.getElementById("story_content").onkeypress = countChars;
+		countChars();
+	</script>
+
 		<%= f.submit "Edit Entry", :class =>"btn btn-link" %> <br/> <br/>
 
 	<% end %>
